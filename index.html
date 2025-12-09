@@ -37,7 +37,7 @@
     <div class="box">
       <div class="code">function title(){ return "Sewerslvt-Newlove"; }</div>
 
-      <button class="pipbtn" id="pipBtn">미니 화면(PiP) 켜기</button>
+      <button class="pipbtn" id="pipBtn">미니 스크린 On</button>
 
       <video
         id="v"
@@ -67,10 +67,10 @@
           await video.requestPictureInPicture();
           btn.textContent = "미니 스크린 Off";
         } else {
-          alert("이 브라우저/앱에서는 PiP가 막혀 있을 수 있어요. (카톡 인앱에서 자주 그럼) 사파리/크롬에서 열고 전체화면 → PiP를 시도해보세요.");
+          alert("이 브라우저/앱에서는 미니 스크린(PiP)이 막혀 있을 수 있어요. 카톡 인앱이면 사파리/크롬에서 다시 열어보세요.");
         }
       } catch (e) {
-        alert("PiP 실행이 차단됐어요. 카톡 인앱이면 외부 브라우저(사파리/크롬)로 열어야 할 수 있어요.");
+        alert("미니 스크린 실행이 차단됐어요. 카톡 인앱이면 외부 브라우저(사파리/크롬)로 열어야 할 수 있어요.");
       }
     });
 
