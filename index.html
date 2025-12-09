@@ -43,7 +43,6 @@
         id="v"
         playsinline
         controls
-        muted
         autoplay
         loop
         preload="metadata">
@@ -60,13 +59,13 @@
       try {
         if (document.pictureInPictureElement) {
           await document.exitPictureInPicture();
-          btn.textContent = "미니 화면(PiP) 켜기";
+          btn.textContent = "미니 스크린 On";
           return;
         }
 
         if (document.pictureInPictureEnabled && video.requestPictureInPicture) {
           await video.requestPictureInPicture();
-          btn.textContent = "미니 화면(PiP) 끄기";
+          btn.textContent = "미니 스크린 Off";
         } else {
           alert("이 브라우저/앱에서는 PiP가 막혀 있을 수 있어요. (카톡 인앱에서 자주 그럼) 사파리/크롬에서 열고 전체화면 → PiP를 시도해보세요.");
         }
@@ -76,10 +75,10 @@
     });
 
     video.addEventListener("enterpictureinpicture", () => {
-      btn.textContent = "미니 화면(PiP) 끄기";
+      btn.textContent = "미니 스크린 Off";
     });
     video.addEventListener("leavepictureinpicture", () => {
-      btn.textContent = "미니 화면(PiP) 켜기";
+      btn.textContent = "미니 스크린 On";
     });
   </script>
 </body>
